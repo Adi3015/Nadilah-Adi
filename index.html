@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>💕Cerita Kita 💕</title>
     <style>
+        /* CSS TETAP SAMA SESUAI PERMINTAAN */
         * {
             margin: 0;
             padding: 0;
@@ -23,7 +24,7 @@
             inset: 0;
             overflow: hidden;
             pointer-events: none;
-            z-index: 0; /* Pastikan container taman ada di lapisan bawah */
+            z-index: 0;
         }
 
         .garden-star {
@@ -161,9 +162,7 @@
             background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
         }
 
-        .hidden {
-            display: none;
-        }
+        .hidden { display: none; }
 
         /* ===== HOME PAGE ===== */
         #home::before {
@@ -197,7 +196,7 @@
 
         .home-content {
             text-align: center;
-            z-index: 10; /* Diperbesar agar di depan bunga */
+            z-index: 10;
             max-width: 600px;
             position: relative;
         }
@@ -221,25 +220,13 @@
         }
 
         @keyframes slideDown {
-            from {
-                opacity: 0;
-                transform: translateY(-50px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
+            from { opacity: 0; transform: translateY(-50px); }
+            to { opacity: 1; transform: translateY(0); }
         }
 
         @keyframes slideUp {
-            from {
-                opacity: 0;
-                transform: translateY(50px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
+            from { opacity: 0; transform: translateY(50px); }
+            to { opacity: 1; transform: translateY(0); }
         }
 
         .start-btn {
@@ -283,17 +270,9 @@
         }
 
         @keyframes rise {
-            0% {
-                transform: translateY(100vh) scale(0) rotate(0deg);
-                opacity: 0;
-            }
-            50% {
-                opacity: 1;
-            }
-            100% {
-                transform: translateY(-100vh) scale(1.5) rotate(360deg);
-                opacity: 0;
-            }
+            0% { transform: translateY(100vh) scale(0) rotate(0deg); opacity: 0; }
+            50% { opacity: 1; }
+            100% { transform: translateY(-100vh) scale(1.5) rotate(360deg); opacity: 0; }
         }
 
         .heart:nth-child(1) { left: 10%; animation-delay: 0s; animation-duration: 10s; }
@@ -335,7 +314,7 @@
         .gallery-header {
             text-align: center;
             margin-bottom: 30px;
-            z-index: 10; /* Diperbesar agar di depan bunga */
+            z-index: 10;
             color: white;
             position: relative;
         }
@@ -347,10 +326,7 @@
             text-shadow: 0 5px 15px rgba(0,0,0,0.3);
         }
 
-        .gallery-desc {
-            font-size: 1.2em;
-            opacity: 0.95;
-        }
+        .gallery-desc { font-size: 1.2em; opacity: 0.95; }
 
         .gallery-container {
             display: flex;
@@ -362,22 +338,12 @@
             scrollbar-width: thin;
             scrollbar-color: rgba(255,255,255,0.5) transparent;
             position: relative;
-            z-index: 10; /* Diperbesar agar di depan bunga */
+            z-index: 10;
         }
 
-        .gallery-container::-webkit-scrollbar {
-            height: 10px;
-        }
-
-        .gallery-container::-webkit-scrollbar-track {
-            background: rgba(255,255,255,0.1);
-            border-radius: 10px;
-        }
-
-        .gallery-container::-webkit-scrollbar-thumb {
-            background: rgba(255,255,255,0.5);
-            border-radius: 10px;
-        }
+        .gallery-container::-webkit-scrollbar { height: 10px; }
+        .gallery-container::-webkit-scrollbar-track { background: rgba(255,255,255,0.1); border-radius: 10px; }
+        .gallery-container::-webkit-scrollbar-thumb { background: rgba(255,255,255,0.5); border-radius: 10px; }
 
         .polaroid {
             background: white;
@@ -389,12 +355,10 @@
             position: relative;
             border-radius: 15px;
             flex-shrink: 0;
+            cursor: pointer;
         }
 
-        .polaroid:nth-child(even) {
-            transform: rotate(2deg);
-        }
-
+        .polaroid:nth-child(even) { transform: rotate(2deg); }
         .polaroid:hover {
             transform: rotate(0deg) scale(1.08);
             box-shadow: 0 20px 50px rgba(0,0,0,0.4);
@@ -420,24 +384,9 @@
             transition: transform 0.5s ease;
         }
 
-        .polaroid:hover .photo-wrapper img {
-            transform: scale(1.1);
-        }
-
-        .photo-caption {
-            text-align: center;
-            font-weight: 600;
-            color: #667eea;
-            font-size: 1.1em;
-            margin-bottom: 5px;
-        }
-
-        .photo-message {
-            text-align: center;
-            font-style: italic;
-            color: #666;
-            font-size: 0.95em;
-        }
+        .polaroid:hover .photo-wrapper img { transform: scale(1.1); }
+        .photo-caption { text-align: center; font-weight: 600; color: #667eea; font-size: 1.1em; margin-bottom: 5px; }
+        .photo-message { text-align: center; font-style: italic; color: #666; font-size: 0.95em; }
 
         .secret-message {
             position: absolute;
@@ -454,15 +403,13 @@
             font-size: 1.3em;
         }
 
-        .polaroid.show .secret-message {
-            display: flex;
-        }
+        .polaroid.show .secret-message { display: flex; }
 
         .gallery-nav {
             display: flex;
             justify-content: center;
             margin-bottom: 20px;
-            z-index: 10; /* Diperbesar agar di depan bunga */
+            z-index: 10;
             position: relative;
         }
 
@@ -483,7 +430,6 @@
             background: white;
             transform: translateY(-3px);
             box-shadow: 0 8px 25px rgba(0,0,0,0.2);
-            background: white;
         }
 
         /* Floating Emojis di Galeri */
@@ -495,7 +441,7 @@
             height: 100%;
             pointer-events: none;
             overflow: hidden;
-            z-index: 5; /* Di atas bunga, di bawah foto */
+            z-index: 5;
         }
 
         .emoji {
@@ -506,12 +452,8 @@
         }
 
         @keyframes floatEmoji {
-            0%, 100% {
-                transform: translateY(0px) rotate(0deg);
-            }
-            50% {
-                transform: translateY(-30px) rotate(15deg);
-            }
+            0%, 100% { transform: translateY(0px) rotate(0deg); }
+            50% { transform: translateY(-30px) rotate(15deg); }
         }
 
         .emoji:nth-child(1) { top: 15%; left: 5%; animation-delay: 0s; }
@@ -523,7 +465,7 @@
         .emoji:nth-child(7) { top: 60%; left: 15%; animation-delay: 5s; }
         .emoji:nth-child(8) { top: 80%; right: 10%; animation-delay: 7s; }
 
-        /* ===== PUZZLE PAGE - UPDATED FOR HP ===== */
+        /* ===== PUZZLE PAGE ===== */
         .puzzle-header {
             text-align: center;
             margin-bottom: 20px;
@@ -539,11 +481,7 @@
             text-shadow: 0 5px 15px rgba(0,0,0,0.3);
         }
 
-        .puzzle-subtitle {
-            font-size: 1.2em;
-            opacity: 0.95;
-            padding: 0 10px;
-        }
+        .puzzle-subtitle { font-size: 1.2em; opacity: 0.95; padding: 0 10px; }
 
         #game {
             display: flex;
@@ -559,7 +497,7 @@
         }
 
         #board {
-            width: 360px; /* Diperkecil sedikit agar pas di layar HP umum */
+            width: 360px;
             height: 450px;
             display: grid;
             grid-template-columns: repeat(3, 1fr);
@@ -580,10 +518,7 @@
             border: 2px dashed rgba(255, 255, 255, 0.3);
         }
 
-        .cell:hover {
-            background: rgba(255, 255, 255, 0.2);
-            border-color: #fff;
-        }
+        .cell:hover { background: rgba(255, 255, 255, 0.2); border-color: #fff; }
 
         .cell.filled {
             background-image: var(--img);
@@ -622,11 +557,7 @@
             box-shadow: 0 5px 15px rgba(0,0,0,0.3);
         }
 
-        .piece:active {
-            cursor: grabbing;
-            transform: scale(1.1);
-            z-index: 100;
-        }
+        .piece:active { cursor: grabbing; transform: scale(1.1); z-index: 100; }
 
         .new-game-btn {
             padding: 15px 45px;
@@ -656,10 +587,7 @@
             animation: fadeIn 0.3s ease;
         }
 
-        @keyframes fadeIn {
-            from { opacity: 0; }
-            to { opacity: 1; }
-        }
+        @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
 
         #winBox {
             background: white;
@@ -687,11 +615,11 @@
             cursor: pointer;
         }
 
-        /* ===== LOVE LETTER PAGE (IMPROVED FOR HP) ===== */
+        /* ===== LOVE LETTER PAGE ===== */
         .letter-container {
             max-width: 550px;
             width: 92%;
-            background: #fffdf9; /* Warna kertas lama krem muda */
+            background: #fffdf9;
             padding: 40px 25px;
             border-radius: 5px;
             box-shadow: 0 20px 50px rgba(0,0,0,0.5);
@@ -700,7 +628,6 @@
             animation: slideDown 0.8s ease-out;
             position: relative;
             z-index: 10;
-            /* Border Efek Kertas */
             border: 1px solid #e0dcd0;
             background-image: radial-gradient(#d1d1d1 0.5px, transparent 0.5px);
             background-size: 20px 20px;
@@ -710,30 +637,14 @@
             content: '';
             position: absolute;
             inset: 10px;
-            border: 1px solid #d4af37; /* Border emas tipis */
+            border: 1px solid #d4af37;
             pointer-events: none;
             opacity: 0.5;
         }
 
-        .letter-header {
-            margin-bottom: 25px;
-            position: relative;
-        }
-
-        .letter-title {
-            font-size: 2.2em;
-            color: #d63384;
-            margin-bottom: 5px;
-            font-weight: 700;
-            font-family: 'Georgia', serif;
-        }
-
-        .letter-date {
-            font-size: 0.9em;
-            color: #888;
-            font-style: italic;
-            letter-spacing: 1px;
-        }
+        .letter-header { margin-bottom: 25px; position: relative; }
+        .letter-title { font-size: 2.2em; color: #d63384; margin-bottom: 5px; font-weight: 700; font-family: 'Georgia', serif; }
+        .letter-date { font-size: 0.9em; color: #888; font-style: italic; letter-spacing: 1px; }
 
         .letter-body {
             text-align: left;
@@ -744,16 +655,9 @@
             padding-right: 10px;
         }
 
-        /* Custom Scrollbar untuk surat */
         .letter-body::-webkit-scrollbar { width: 4px; }
         .letter-body::-webkit-scrollbar-thumb { background: #d63384; border-radius: 10px; }
-
-        .letter-body p {
-            margin-bottom: 15px;
-            font-size: 1.05em;
-            color: #333;
-            font-family: 'Georgia', serif;
-        }
+        .letter-body p { margin-bottom: 15px; font-size: 1.05em; color: #333; font-family: 'Georgia', serif; }
 
         .letter-signature {
             text-align: right;
@@ -763,27 +667,6 @@
             margin-top: 20px;
             font-style: italic;
             font-family: 'Georgia', serif;
-        }
-
-        /* Wax Seal Decoration */
-        .wax-seal {
-            width: 50px;
-            height: 50px;
-            background: #b22222;
-            border-radius: 50%;
-            display: inline-block;
-            margin-top: -10px;
-            position: relative;
-            box-shadow: 2px 2px 5px rgba(0,0,0,0.3);
-            border: 3px solid #8b0000;
-        }
-
-        .wax-seal::after {
-            content: '❤';
-            color: #ffcccc;
-            font-size: 20px;
-            line-height: 45px;
-            text-shadow: 1px 1px 2px rgba(0,0,0,0.5);
         }
 
         .letter-btn {
@@ -800,18 +683,9 @@
             margin-top: 15px;
         }
 
-        .letter-btn:hover {
-            transform: translateY(-3px);
-            background: #c2126d;
-        }
+        .letter-btn:hover { transform: translateY(-3px); background: #c2126d; }
 
-        .letter-hearts {
-            position: absolute;
-            font-size: 1.5em;
-            opacity: 0.15;
-            color: #d63384;
-        }
-
+        .letter-hearts { position: absolute; font-size: 1.5em; opacity: 0.15; color: #d63384; }
         .letter-hearts:nth-child(1) { top: 20px; left: 20px; }
         .letter-hearts:nth-child(2) { top: 20px; right: 20px; }
         .letter-hearts:nth-child(3) { bottom: 20px; left: 20px; }
@@ -819,44 +693,13 @@
 
         /* Responsive */
         @media (max-width: 768px) {
-            .page {
-                padding: 20px 10px;
-            }
-
-            .home-title {
-                font-size: 2.5em;
-            }
-
-            .gallery-title, .puzzle-title {
-                font-size: 2.2em;
-            }
-
-            #board {
-                width: 90vw;
-                height: 112.5vw; /* Menjaga aspek rasio 3:3.75 */
-                max-width: 320px;
-                max-height: 400px;
-                padding: 8px;
-                gap: 5px;
-            }
-
-            #pieces {
-                width: 90vw;
-                max-width: 320px;
-                padding: 15px;
-                gap: 8px;
-            }
-
-            .piece {
-                width: 75px;
-                height: 94px;
-            }
-
-            .new-game-btn {
-                padding: 12px 35px;
-                font-size: 1em;
-            }
-            
+            .page { padding: 20px 10px; }
+            .home-title { font-size: 2.5em; }
+            .gallery-title, .puzzle-title { font-size: 2.2em; }
+            #board { width: 90vw; height: 112.5vw; max-width: 320px; max-height: 400px; padding: 8px; gap: 5px; }
+            #pieces { width: 90vw; max-width: 320px; padding: 15px; gap: 8px; }
+            .piece { width: 75px; height: 94px; }
+            .new-game-btn { padding: 12px 35px; font-size: 1em; }
             .letter-title { font-size: 1.8em; }
         }
 
@@ -878,20 +721,13 @@
     <!-- HOME PAGE -->
     <div id="home" class="page">
         <div class="midnight-garden"></div>
-        
         <div class="hearts">
-            <div class="heart">💕</div>
-            <div class="heart">💖</div>
-            <div class="heart">💗</div>
-            <div class="heart">💝</div>
-            <div class="heart">💕</div>
-            <div class="heart">💖</div>
-            <div class="heart">💗</div>
-            <div class="heart">💝</div>
-            <div class="heart">💕</div>
-            <div class="heart">💖</div>
+            <div class="heart">💕</div><div class="heart">💖</div>
+            <div class="heart">💗</div><div class="heart">💝</div>
+            <div class="heart">💕</div><div class="heart">💖</div>
+            <div class="heart">💗</div><div class="heart">💝</div>
+            <div class="heart">💕</div><div class="heart">💖</div>
         </div>
-        
         <div class="home-content">
             <h1 class="home-title">💕 Cerita Kita 💕</h1>
             <p class="home-subtitle">Hai dila ini Perjalanan Cinta Kita.</p>
@@ -903,28 +739,20 @@
     <div id="gallery" class="page hidden">
         <div class="midnight-garden"></div>
         <button class="back-btn" onclick="goToHome()">← Kembali</button>
-        
         <div class="floating-emojis">
-            <div class="emoji">😍</div>
-            <div class="emoji">💖</div>
-            <div class="emoji">🥰</div>
-            <div class="emoji">😘</div>
-            <div class="emoji">🌸</div>
-            <div class="emoji">💕</div>
-            <div class="emoji">🌟</div>
-            <div class="emoji">✨</div>
+            <div class="emoji">😍</div><div class="emoji">💖</div>
+            <div class="emoji">🥰</div><div class="emoji">😘</div>
+            <div class="emoji">🌸</div><div class="emoji">💕</div>
+            <div class="emoji">🌟</div><div class="emoji">✨</div>
         </div>
-
         <div class="gallery-header">
             <h2 class="gallery-title">📸 Galeri Kenangan 📸</h2>
             <p class="gallery-desc">Ini Foto-Foto kita Dari Awal Hingga sekarang💕</p>
             <p class="gallery-desc">Di Geser ke kanan yaa</p>
         </div>
-
         <div class="gallery-nav">
             <button class="nav-btn" onclick="goToLetter()">💌 Baca Surat Cinta 💌</button>
         </div>
-
         <div class="gallery-container" id="galleryContainer"></div>
     </div>
 
@@ -932,18 +760,13 @@
     <div id="letter" class="page hidden">
         <div class="midnight-garden"></div>
         <button class="back-btn" onclick="goToGallery()">← Ke Galeri</button>
-        
         <div class="letter-container">
-            <span class="letter-hearts">💕</span>
-            <span class="letter-hearts">💖</span>
-            <span class="letter-hearts">💗</span>
-            <span class="letter-hearts">💝</span>
-            
+            <span class="letter-hearts">💕</span><span class="letter-hearts">💖</span>
+            <span class="letter-hearts">💗</span><span class="letter-hearts">💝</span>
             <div class="letter-header">
                 <h2 class="letter-title">Untuk Dila 💕</h2>
                 <p class="letter-date">Teruntuk kamu yang selalu di hati</p>
             </div>
-
             <div class="letter-body">
                 <p>Hai Dila.</p>
                 <p>Adi nggak pernah nyangka kita bisa sejauh ini. Sejak ada Dila, hal-hal kecil yang dulu biasa aja sekarang jadi punya arti. Makasih ya, sudah selalu ada buat Adi, sudah nerima Adi dengan segala baik dan buruknya. Maaf juga untuk semua kebiasaan buruk Adi yang kadang bikin kamu capek.</p>
@@ -951,13 +774,7 @@
                 <p>Terima kasih sudah jadi bagian dalam hidup Adi. Terima kasih untuk setiap detik yang kita lewati bersama. Adi janji akan selalu ada buat kamu, di saat senang maupun saat dunia terasa berat.</p>
                 <p>Adi berharap kita bisa terus saling jaga, saling genggam, dan saling Mencintai.</p>
             </div>
-
-            <div class="letter-signature">
-                Dengan cinta,<br>
-                Untuk selamanya 💕<br>
-
-            </div>
-
+            <div class="letter-signature">Dengan cinta,<br>Untuk selamanya 💕</div>
             <button class="letter-btn" onclick="goToPuzzle()">Lanjut ke Puzzle 🧩</button>
         </div>
     </div>
@@ -966,18 +783,15 @@
     <div id="puzzle" class="page hidden">
         <div class="midnight-garden"></div>
         <button class="back-btn" onclick="goToGallery()">← Ke Galeri</button>
-        
         <div class="puzzle-header">
             <h1 class="puzzle-title">🧩 Photo Puzzle 🧩</h1>
             <p class="puzzle-subtitle">Susun puzzle untuk melihat foto kita</p>
             <p class="puzzle-subtitle">Jangan sampe salah ya 😤</p>
         </div>
-
         <div id="game">
             <div id="board"></div>
             <div id="pieces"></div>
         </div>
-
         <button class="new-game-btn" onclick="initPuzzle()">🔄 Puzzle Baru</button>
     </div>
 
@@ -991,352 +805,231 @@
     </div>
 
     <script>
-        // ===== MUSIC CONTROLLER =====
-        function playMusic(id) {
-            const allAudios = ['audioHome', 'audioGallery', 'audioLetter', 'audioPuzzle'];
-            allAudios.forEach(audioId => {
-                const aud = document.getElementById(audioId);
-                if (audioId === id) {
-                    aud.play().catch(e => console.log("Menunggu interaksi user untuk musik"));
-                } else {
-                    aud.pause();
-                    aud.currentTime = 0; // Reset ke awal
-                }
-            });
-        }
+        // Caching DOM Elements
+        const DOM = {
+            pages: document.querySelectorAll('.page'),
+            galleryContainer: document.getElementById('galleryContainer'),
+            board: document.getElementById('board'),
+            pieces: document.getElementById('pieces'),
+            winPopup: document.getElementById('winPopup'),
+            audios: {
+                home: document.getElementById('audioHome'),
+                gallery: document.getElementById('audioGallery'),
+                letter: document.getElementById('audioLetter'),
+                puzzle: document.getElementById('audioPuzzle')
+            }
+        };
 
-        // ===== DATA =====
-        const tanggal = [
-            "14 Agu 2024", "15 Sep 2024", "15 Sep 2024", "03 Okt 2024",
-            "13 Okt 2024", "19 Okt 2024", "27 Okt 2024", "09 Nov 2024",
-            "23 Nov 2024", "08 Des 2024", "25 Des 2024", "19 Jan 2025",
-            "19 Mar 2025", "19 Mar 2025", "31 Mar 2025", "26 Apr 2025",
-            "23 Mei 2025", "23 Mei 2025", "09 Jun 2025", "06 Agu 2025",
-            "09 Nov 2025", "09 Nov 2025", "09 Nov 2025", "19 Nov 2025",
-             "19 Nov 2025","24 Feb 2025", "01 Jan 2026"
+        // Data
+        const TANGGAL = [
+            "14 Agu 2024", "15 Sep 2024", "15 Sep 2024", "03 Okt 2024", "13 Okt 2024", "19 Okt 2024", "27 Okt 2024", 
+            "09 Nov 2024", "23 Nov 2024", "08 Des 2024", "25 Des 2024", "19 Jan 2025", "19 Mar 2025", "19 Mar 2025", 
+            "31 Mar 2025", "26 Apr 2025", "23 Mei 2025", "23 Mei 2025", "09 Jun 2025", "06 Agu 2025", "09 Nov 2025", 
+            "09 Nov 2025", "09 Nov 2025", "19 Nov 2025", "19 Nov 2025","24 Feb 2025", "01 Jan 2026"
         ];
 
-        const photoMessages = [
-            'Foto pertama 💕', 'Hari spesial ✨', 'Senyummin  dulu 😊',
-            'Mirror Selfie 🌸', 'Dia bm dimsum 🥢✨', 'Nonton hindia 🎸',
-            'pulangnya ngambek 😒 ', 'Sebel rambut pendek😤', 'Mirror Selfie lagi 💖',
-            'Nonton bioskop🎬', 'Melet dikit 😜', 'Knya gak cinta👍🤍',
-            'Di kasi kue 🎂', 'kado dari dilaa 🎁', 'pose muka jelek 🤪',
-            'hemmm 😑', 'Nonton konser 🎶', 'Cape nonton 🙌',
-            'Rakit lego 🧩 ','jalan jalan  🛵🛣️', 'Adi ngasih bunga 🌸', 'bunganya kalah cantik 🌷',
-            '🌺💐 ', 'Foto box 👫', 'cosply jadi koboy 🤠',
-            'Abis nonton avatar 🥰', 'selamanya 💕', 
+        const PHOTO_MESSAGES = [
+            'Foto pertama 💕', 'Hari spesial ✨', 'Senyummin dulu 😊', 'Mirror Selfie 🌸', 'Dia bm dimsum 🥢✨', 
+            'Nonton hindia 🎸', 'pulangnya ngambek 😒 ', 'Sebel rambut pendek😤', 'Mirror Selfie lagi 💖', 
+            'Nonton bioskop🎬', 'Melet dikit 😜', 'Knya gak cinta👍🤍', 'Di kasi kue 🎂', 'kado dari dilaa 🎁', 
+            'pose muka jelek 🤪', 'hemmm 😑', 'Nonton konser 🎶', 'Cape nonton 🙌', 'Rakit lego 🧩 ',
+            'jalan jalan 🛵🛣️', 'Adi ngasih bunga 🌸', 'bunganya kalah cantik 🌷', '🌺💐 ', 'Foto box 👫', 
+            'cosply jadi koboy 🤠', 'Abis nonton avatar 🥰', 'selamanya 💕'
         ];
 
-        const photos = [
-            "fotopzl1.jpg",
-            "fotopzl2.jpg",
-            "fotopzl3.jpg"
-        ];
-
-        // ===== PUZZLE VARIABLES =====
+        const PUZZLE_PHOTOS = ["fotopzl1.jpg", "fotopzl2.jpg", "fotopzl3.jpg"];
         const ROWS = 3, COLS = 3;
-        let board = [];
+        let boardState = [];
         let photoIndex = 0;
 
-        // ===== NAVIGATION =====
-        function hideAll() {
-            document.querySelectorAll('.page').forEach(p => p.classList.add('hidden'));
+        // Music Logic
+        function playMusic(pageName) {
+            Object.values(DOM.audios).forEach(audio => {
+                audio.pause();
+                audio.currentTime = 0;
+            });
+            const selected = DOM.audios[pageName];
+            if (selected) {
+                selected.play().catch(() => console.log("User interaction required"));
+            }
         }
 
-        function goToHome() {
-            hideAll();
-            document.getElementById('home').classList.remove('hidden');
-            playMusic('audioHome');
+        // Navigation
+        function showPage(id) {
+            DOM.pages.forEach(p => p.classList.add('hidden'));
+            document.getElementById(id).classList.remove('hidden');
         }
 
-        function goToGallery() {
-            hideAll();
-            document.getElementById('gallery').classList.remove('hidden');
-            initGallery();
-            playMusic('audioGallery');
-        }
+        function goToHome() { showPage('home'); playMusic('home'); }
+        function goToGallery() { showPage('gallery'); initGallery(); playMusic('gallery'); }
+        function goToLetter() { showPage('letter'); playMusic('letter'); }
+        function goToPuzzle() { showPage('puzzle'); initPuzzle(); playMusic('puzzle'); }
 
-        function goToLetter() {
-            hideAll();
-            document.getElementById('letter').classList.remove('hidden');
-            playMusic('audioLetter');
-        }
-
-        function goToPuzzle() {
-            hideAll();
-            document.getElementById('puzzle').classList.remove('hidden');
-            initPuzzle();
-            playMusic('audioPuzzle');
-        }
-
-        // ===== GALLERY =====
+        // Gallery logic
         function initGallery() {
-            const container = document.getElementById('galleryContainer');
-            container.innerHTML = '';
-            
+            if (DOM.galleryContainer.children.length > 0) return;
+            const fragment = document.createDocumentFragment();
             for (let i = 1; i <= 27; i++) {
                 const polaroid = document.createElement('div');
                 polaroid.className = 'polaroid';
                 polaroid.innerHTML = `
                     <div class="photo-wrapper">
-                        <img src="foto${i}.jpg" alt="Foto ${i}" onerror="this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%22280%22 height=%22280%22%3E%3Crect fill=%22%23f0f0f0%22 width=%22280%22 height=%22280%22/%3E%3Ctext x=%2250%25%22 y=%2250%25%22 font-size=%2224%22 fill=%22%23999%22 text-anchor=%22middle%22 dy=%22.3em%22%3EFoto ${i}%3C/text%3E%3C/svg%3E'">
+                        <img src="foto${i}.jpg" alt="Foto ${i}" onerror="this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%22280%22 height=%22280%22%3E%3Crect fill=%22%23f0f0f0%22 width=%22280%22 height=%22280%22/%3E%3C/svg%3E'">
                     </div>
-                    <p class="photo-caption">${tanggal[i - 1]}</p>
-                    <p class="photo-message">${photoMessages[i - 1]}</p>
-                    <div class="secret-message">${photoMessages[i - 1]}</div>
+                    <p class="photo-caption">${TANGGAL[i - 1] || ""}</p>
+                    <p class="photo-message">${PHOTO_MESSAGES[i - 1] || ""}</p>
+                    <div class="secret-message">${PHOTO_MESSAGES[i - 1] || ""}</div>
                 `;
                 polaroid.onclick = () => polaroid.classList.toggle('show');
-                container.appendChild(polaroid);
+                fragment.appendChild(polaroid);
             }
+            DOM.galleryContainer.appendChild(fragment);
         }
 
-        // ===== PUZZLE =====
-        function setPhoto() {
-            document.documentElement.style.setProperty(
-                "--img",
-                `url("${photos[photoIndex]}")`
-            );
-        }
-
+        // Puzzle logic
         function initPuzzle() {
-            board = Array(ROWS * COLS).fill(null);
-            document.getElementById("winPopup").style.display = "none";
-            setPhoto();
-            createBoard();
-            createPieces();
-        }
-
-        function createBoard() {
-            const b = document.getElementById("board");
-            b.innerHTML = "";
+            boardState = Array(ROWS * COLS).fill(null);
+            DOM.winPopup.style.display = "none";
+            document.documentElement.style.setProperty("--img", `url("${PUZZLE_PHOTOS[photoIndex]}")`);
+            
+            // Create Board
+            DOM.board.innerHTML = "";
             for (let i = 0; i < ROWS * COLS; i++) {
                 const cell = document.createElement("div");
                 cell.className = "cell";
                 cell.dataset.pos = i;
                 cell.ondragover = e => e.preventDefault();
                 cell.ondrop = e => drop(e, i);
-                b.appendChild(cell);
+                DOM.board.appendChild(cell);
             }
-        }
 
-        function createPieces() {
-            const p = document.getElementById("pieces");
-            p.innerHTML = "";
+            // Create Pieces
+            DOM.pieces.innerHTML = "";
             const order = [...Array(ROWS * COLS).keys()].sort(() => Math.random() - 0.5);
             order.forEach(i => addPieceToPanel(i));
         }
 
         function addPieceToPanel(i) {
-            const p = document.getElementById("pieces");
             const d = document.createElement("div");
             d.className = "piece";
             d.draggable = true;
             d.dataset.i = i;
-
-            const col = i % COLS;
-            const row = Math.floor(i / COLS);
-            d.style.backgroundPosition =
-                `${(col * 100) / (COLS - 1)}% ${(row * 100) / (ROWS - 1)}%`;
-
-            d.ondragstart = e => {
-                e.dataTransfer.setData("from", "pieces");
-                e.dataTransfer.setData("i", i);
-            };
-            p.appendChild(d);
+            const col = i % COLS, row = Math.floor(i / COLS);
+            d.style.backgroundPosition = `${(col * 100) / (COLS - 1)}% ${(row * 100) / (ROWS - 1)}%`;
+            d.ondragstart = e => { e.dataTransfer.setData("from", "pieces"); e.dataTransfer.setData("i", i); };
+            DOM.pieces.appendChild(d);
         }
 
         function drop(e, pos) {
             const from = e.dataTransfer.getData("from");
-            const i = +e.dataTransfer.getData("i");
-
-            if (board[pos] !== null) {
-                addPieceToPanel(board[pos]);
-            }
-
-            const cell = document.querySelector(`.cell[data-pos="${pos}"]`);
+            const i = parseInt(e.dataTransfer.getData("i"));
+            if (boardState[pos] !== null) addPieceToPanel(boardState[pos]);
+            
+            const cell = DOM.board.querySelector(`.cell[data-pos="${pos}"]`);
             cell.classList.add("filled");
-
-            const col = i % COLS;
-            const row = Math.floor(i / COLS);
-            cell.style.backgroundPosition =
-                `${(col * 100) / (COLS - 1)}% ${(row * 100) / (ROWS - 1)}%`;
+            const col = i % COLS, row = Math.floor(i / COLS);
+            cell.style.backgroundPosition = `${(col * 100) / (COLS - 1)}% ${(row * 100) / (ROWS - 1)}%`;
 
             if (from === "pieces") {
-                document.querySelector(`.piece[data-i="${i}"]`)?.remove();
-            } else {
-                const old = document.querySelector(`.cell[data-pos="${from}"]`);
-                old.classList.remove("filled");
-                old.style.background = "";
-                board[from] = null;
+                const p = DOM.pieces.querySelector(`.piece[data-i="${i}"]`);
+                if (p) p.remove();
             }
-
-            board[pos] = i;
-
-            if (board.every((v, idx) => v === idx)) {
-                setTimeout(showWin, 300);
+            boardState[pos] = i;
+            if (boardState.every((v, idx) => v === idx)) {
+                setTimeout(() => {
+                    DOM.winPopup.style.display = "flex";
+                    photoIndex = (photoIndex + 1) % PUZZLE_PHOTOS.length;
+                }, 300);
             }
         }
 
-        function showWin() {
-            document.getElementById("winPopup").style.display = "flex";
-            photoIndex = (photoIndex + 1) % photos.length;
-        }
+        function closePopup() { initPuzzle(); }
 
-        function closePopup() {
-            initPuzzle();
-        }
-
-        // Initialize
+        // Initializer
         window.onload = () => {
-           goToHome();
-           
-           // TRIGGER AUTOPLAY: Musik jalan saat interaksi apapun (klik, sentuh, scroll)
-           const startAudio = () => {
-               playMusic('audioHome');
-               // Hapus listener setelah musik berhasil diputar satu kali
-               ['click', 'touchstart', 'scroll', 'mousedown'].forEach(evt => 
-                   window.removeEventListener(evt, startAudio)
-               );
-           };
-
-           // Pantau segala jenis interaksi pertama
-           ['click', 'touchstart', 'scroll', 'mousedown'].forEach(evt => 
-               window.addEventListener(evt, startAudio)
-           );
+            goToHome();
+            const startInteraction = () => {
+                playMusic('home');
+                ['click', 'touchstart', 'scroll'].forEach(ev => window.removeEventListener(ev, startInteraction));
+            };
+            ['click', 'touchstart', 'scroll'].forEach(ev => window.addEventListener(ev, startInteraction));
+            
+            document.querySelectorAll('.midnight-garden').forEach(garden => initMidnightGardenElement(garden));
         };
-        
-        // Initialize all midnight gardens
-        setTimeout(() => {
-            document.querySelectorAll('.midnight-garden').forEach(garden => {
-                initMidnightGardenElement(garden);
-            });
-        }, 100);
 
-        // ===== MIDNIGHT GARDEN ANIMATION =====
-        function initMidnightGarden() {
-            document.querySelectorAll('.midnight-garden').forEach(garden => {
-                initMidnightGardenElement(garden);
-            });
-        }
-
+        // Garden Engine
         function initMidnightGardenElement(garden) {
             if (!garden || garden.children.length > 0) return;
-
             const isMobile = window.innerWidth < 600;
 
-            // 1. Generate Stars
-            const starCount = isMobile ? 150 : 300;
-            for(let i=0; i<starCount; i++) {
+            // Stars
+            for(let i=0; i < (isMobile ? 100 : 200); i++) {
                 const s = document.createElement('div');
                 s.className = 'garden-star';
-                const size = Math.random() * (isMobile ? 1.5 : 2);
-                s.style.width = size + 'px';
-                s.style.height = size + 'px';
-                s.style.left = Math.random() * 100 + '%';
-                s.style.top = Math.random() * 80 + '%';
+                const size = Math.random() * 2;
+                Object.assign(s.style, {
+                    width: size + 'px', height: size + 'px',
+                    left: Math.random() * 100 + '%', top: Math.random() * 80 + '%'
+                });
                 s.style.setProperty('--t', (2 + Math.random() * 5) + 's');
                 garden.appendChild(s);
             }
 
-            // 2. Generate Bokeh
-            const bokehCount = isMobile ? 30 : 60;
-            for(let i=0; i<bokehCount; i++) {
-                const b = document.createElement('div');
-                b.className = 'garden-bokeh';
-                const size = 4 + Math.random() * 15;
-                b.style.width = size + 'px';
-                b.style.height = size + 'px';
-                b.style.left = Math.random() * 100 + '%';
-                b.style.setProperty('--d', (10 + Math.random() * 15) + 's');
-                b.style.animationDelay = Math.random() * 15 + 's';
-                garden.appendChild(b);
-            }
-
-            // 3. Add Glow
+            // Grass & Glow
             const glow = document.createElement('div');
             glow.className = 'garden-glow';
             garden.appendChild(glow);
 
-            // 4. Generate Grass Blades
-            const grassCount = isMobile ? 50 : 100;
-            for(let i=0; i<grassCount; i++) {
+            for(let i=0; i < (isMobile ? 40 : 80); i++) {
                 const blade = document.createElement('div');
                 blade.className = 'garden-blade';
                 const h = 30 + Math.random() * (isMobile ? 80 : 150);
                 blade.style.height = h + 'px';
                 blade.style.left = Math.random() * 100 + '%';
-                blade.style.opacity = 0.15 + (h/400);
                 blade.style.animation = `swayAnim ${3 + Math.random()*2}s infinite ease-in-out`;
-                blade.style.animationDelay = Math.random() * -5 + 's';
                 garden.appendChild(blade);
             }
 
-            // 5. Create Flowers
-            function createFlower(left, height, color, petalCount, delay) {
-                const system = document.createElement('div');
-                system.className = 'garden-flower-system garden-sway';
-                system.style.left = left + '%';
-                system.style.animationDelay = delay + 's';
+            // Flowers
+            const config = isMobile ? 
+                [[15, 150, '#ff1f5a', 6, 0.5], [50, 250, '#00b4d8', 8, 0.2], [85, 180, '#ff9100', 5, 0.8]] :
+                [[10, 150, '#ff1f5a', 6, 0.5], [30, 250, '#7b2cb1', 8, 1.4], [50, 350, '#00b4d8', 10, 0.2], [70, 270, '#f72585', 7, 1.9], [90, 200, '#ff9100', 5, 0.8]];
+            
+            config.forEach(c => createFlower(garden, ...c, isMobile));
+        }
 
-                const stem = document.createElement('div');
-                stem.className = 'garden-stem';
-                const finalHeight = isMobile ? height * 0.6 : height;
-                stem.style.setProperty('--h', finalHeight + 'px');
-                stem.style.animationDelay = delay + 's';
+        function createFlower(garden, left, height, color, petalCount, delay, isMobile) {
+            const system = document.createElement('div');
+            system.className = 'garden-flower-system garden-sway';
+            system.style.left = left + '%';
+            system.style.animationDelay = delay + 's';
 
-                // Leaves
-                const leaves = [{ pos: 0.3, side: 'l', d: 1.2 }, { pos: 0.6, side: 'r', d: 1.8 }];
-                leaves.forEach(data => {
-                    const leaf = document.createElement('div');
-                    leaf.className = `garden-leaf ${data.side}`;
-                    leaf.style.bottom = (finalHeight * data.pos) + 'px';
-                    leaf.style.animationDelay = (delay + data.d) + 's';
-                    stem.appendChild(leaf);
-                });
+            const stem = document.createElement('div');
+            stem.className = 'garden-stem';
+            const finalHeight = isMobile ? height * 0.7 : height;
+            stem.style.setProperty('--h', finalHeight + 'px');
+            stem.style.animationDelay = delay + 's';
 
-                // Flower Head
-                const head = document.createElement('div');
-                head.className = 'garden-flower-head';
-                head.style.animationDelay = (delay + 2.4) + 's';
+            const head = document.createElement('div');
+            head.className = 'garden-flower-head';
+            head.style.animationDelay = (delay + 2.4) + 's';
 
-                // Petals
-                for(let layer=0; layer<2; layer++) {
-                    const count = layer === 0 ? petalCount : petalCount - 1;
-                    for(let i=0; i<count; i++) {
-                        const p = document.createElement('div');
-                        p.className = 'garden-petal';
-                        const scale = layer === 0 ? 1 : 0.7;
-                        p.style.setProperty('--pw', (finalHeight/5.5 * scale) + 'px');
-                        p.style.setProperty('--ph', (finalHeight/3.2 * scale) + 'px');
-                        p.style.setProperty('--c', color);
-                        const rot = (360/count) * i + (layer * 20);
-                        p.style.transform = `rotate(${rot}deg)`;
-                        head.appendChild(p);
-                    }
-                }
-
-                const center = document.createElement('div');
-                center.className = 'garden-center';
-                head.appendChild(center);
-
-                stem.appendChild(head);
-                system.appendChild(stem);
-                garden.appendChild(system);
+            for(let i=0; i<petalCount; i++) {
+                const p = document.createElement('div');
+                p.className = 'garden-petal';
+                p.style.setProperty('--pw', (finalHeight/5) + 'px');
+                p.style.setProperty('--ph', (finalHeight/3) + 'px');
+                p.style.setProperty('--c', color);
+                p.style.transform = `rotate(${(360/petalCount) * i}deg)`;
+                head.appendChild(p);
             }
 
-            // Flower Configuration
-            if(isMobile) {
-                createFlower(15, 150, 'rgba(255, 31, 90, 0.8)', 6, 0.5);
-                createFlower(50, 250, 'rgba(0, 180, 216, 0.8)', 8, 0.2);
-                createFlower(85, 180, 'rgba(255, 145, 0, 0.8)', 5, 0.8);
-            } else {
-                createFlower(10, 150, 'rgba(255, 31, 90, 0.8)', 6, 0.5);
-                createFlower(30, 250, 'rgba(123, 44, 191, 0.8)', 8, 1.4);
-                createFlower(50, 350, 'rgba(0, 180, 216, 0.8)', 10, 0.2);
-                createFlower(70, 270, 'rgba(247, 37, 133, 0.8)', 7, 1.9);
-                createFlower(90, 200, 'rgba(255, 145, 0, 0.8)', 5, 0.8);
-            }
+            const center = document.createElement('div');
+            center.className = 'garden-center';
+            head.appendChild(center);
+            stem.appendChild(head);
+            system.appendChild(stem);
+            garden.appendChild(system);
         }
     </script>
 </body>
